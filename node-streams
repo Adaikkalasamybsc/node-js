@@ -1,0 +1,39 @@
+//---------------stream(object)(data,end,error,)-----------------
+/*var st=require("fs")
+var data=' '
+//var rs=st.createReadStream("inputtext.txt")
+var rs=st.createWriteStream("inputtext.txt")
+//var rs=st.createReadStream("kidskid inputtext.txt")
+rs.on("data",(thilak)=>{
+    data=thilak
+})
+rs.on("end",()=>{
+    console.log("data:"+data)
+})
+console.log("program end")
+
+// rs.on("error",(err)=>{
+// console.log("error:"+err)  //error calling
+// })
+*/
+/*
+//-----------write stream (finish, error)------------
+ const {isUtf8 }=require("buffer")  
+   var ws=require("fs")
+   var data="welcome to  data write stream"
+     var wsd=ws.createWriteStream("output.txt")
+     wsd.write(data,'UTF8')
+     wsd.end()
+     wsd.on("finish",()=>{
+        console.log("write success")
+     })
+     wsd.on("error",(err)=>{
+        console.log("error:"+err)
+     })
+*/
+//=========both read and write=================
+     var fs=require("fs")
+     var ws=fs.createReadStream("inputtext.txt")
+     var rs=fs.createWriteStream("output.txt")
+    ws.pipe(rs)
+     console.log("sucess")
