@@ -1,0 +1,31 @@
+
+// event on and emit----------------
+/*var e=require("events")
+var ee=new e.EventEmitter()
+ee.on("samy",function(){
+   console.log("event called")
+
+})
+ee.emit("samy")
+console.log("program end")
+*/
+//-----------------------------
+/*
+const show=()=>{
+    console.log("data received")
+}
+const show1=(k)=>{
+    console.log("data received",k)
+}
+ee.on("ragul",show)
+ee.on("ragul",()=>{show1(200)})
+ee.emit("ragul")
+*/
+   const { Console } = require("console")
+var event=require("events")
+   var evecal=new event.EventEmitter()
+   evecal.on("nanban",function(){
+        console.log("event is calling")
+   })
+    evecal.emit("nanban")
+    console.log("evend called")
