@@ -1,0 +1,18 @@
+//============webmodule=================
+var http=require("http")
+var fs=require("fs")
+var url=require("url")
+http.createServer((req,res)=>{
+   // res.end("test server")
+      var path=url.parse(req.url).pathname;
+      console.log(path)
+         
+      fs.readFile(path.substring(1),(err,data)=>{
+        console.log(data+"")  //console print
+        res.write(data+"")    //browser print
+        res.end()
+       // if(err){console.log(err)}
+      })
+   //console.log("test")
+}).listen(2002)
+console.log("port number listing---------at 2002")
