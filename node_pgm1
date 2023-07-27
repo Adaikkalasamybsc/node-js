@@ -1,0 +1,8 @@
+
+var hp=require("http")
+console.log("http header accepted")
+  var ans=hp.createServer((req,res)=>{
+    res.end("welome to http header"+res)
+}).listen(2001)
+console.log("port listing ----@",ans.address().port)
+
