@@ -1,0 +1,21 @@
+//non_blocking or  async:
+--------------------------------
+
+/*var fs1=require("fs")
+fs1.readFile("inputtext.txt",(err,data)=>{
+if(err)
+{console.log(err.toString())}
+else{
+console.log(data.toString())
+
+}
+})
+console.log("program end")
+*/
+var file=require("fs")
+file.readFile("inputtext.txt",(err,data)=>{
+   if(err){console.log(err.tostring())}
+   else
+ console.log("result:",data.toString())
+})
+console.log("program end")
